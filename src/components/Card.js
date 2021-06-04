@@ -1,4 +1,4 @@
-import { Stack, Input, Box } from "@chakra-ui/react";
+import { Stack, Input, Box, Text } from "@chakra-ui/react";
 import { useState } from 'react';
 
 function Card(props) {
@@ -7,7 +7,7 @@ function Card(props) {
         <Stack spacing={3}>
             <Input onChange={(event) => setAmount(currencyConverter(event.target.value))} placeholder="5000" />
             <Box bg="white" h="250px" w="400px" p={6} borderWidth="1px" borderRadius="lg">
-                {amount}
+                <Text fontSize="4xl">{amount}</Text>
             </Box>
         </Stack>
     );

@@ -1,5 +1,6 @@
 import { Stack, InputGroup, Input, InputLeftAddon, Box, Text } from "@chakra-ui/react";
 import { useState } from 'react';
+import currencyConverter from '../helpers/currencyConverter'
 
 function Card(props) {
     let [amount, setAmount] = useState(currencyConverter(5000));
@@ -16,12 +17,4 @@ function Card(props) {
     );
 }
 
-function currencyConverter(val) {
-    return (Number(val)).toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    })
-}
-
 export default Card;
-export { currencyConverter };

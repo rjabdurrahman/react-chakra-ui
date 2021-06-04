@@ -1,5 +1,5 @@
-import { currencyConverter } from '../Card';
+import currencyConverter from '../../helpers/currencyConverter';
 
-test('test', () => {
+it('test', () => {
   expect(currencyConverter(1000)).toBe('$1,000.00');
-})
+});

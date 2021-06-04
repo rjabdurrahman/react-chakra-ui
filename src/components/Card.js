@@ -8,10 +8,10 @@ function Card(props) {
         <Stack spacing={3}>
             <InputGroup>
                 <InputLeftAddon children="$" />
-                <Input onChange={(event) => setAmount(currencyConverter(event.target.value))} placeholder="5000" />
+                <Input data-testid="currency-input" onChange={(event) => setAmount(currencyConverter(event.target.value))} placeholder="5000" />
             </InputGroup>
             <Box bg="white" h="250px" w="400px" p={6} borderWidth="1px" borderRadius="lg">
-                <Text fontSize="4xl">{amount}</Text>
+                <Text data-testid="currency-text" fontSize="4xl">{amount}</Text>
             </Box>
         </Stack>
     );

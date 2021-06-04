@@ -24,3 +24,4 @@ function currencyConverter(val) {
 }
 
 export default Card;
+export { currencyConverter };

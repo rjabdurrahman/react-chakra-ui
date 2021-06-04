@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import Card from './components/Card';
 import './App.css';
+import { ChakraProvider, Center } from "@chakra-ui/react"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ChakraProvider>
+      <Center h="100vh" w="100%" bgGradient="linear(to-r,gray.300,yellow.300,pink.200)">
+        <Card />
+      </Center>
+    </ChakraProvider>
+  )
 }
 
 export default App;
